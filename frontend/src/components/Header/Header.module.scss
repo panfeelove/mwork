@@ -1,0 +1,17 @@
+@import '../../common/colors.scss';
+
+.root {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $--whisper-white;
+  padding: 0 2rem;
+}
+
+.brandName {
+  font-family: "Fascinate Inline", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
