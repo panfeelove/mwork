@@ -1,0 +1,22 @@
+@import '../../../common/colors.scss';
+@import '../../../common/mixins.scss';
+
+.root, .info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info {
+  gap: 5px;
+}
+
+.name {
+  color: $--slate-gray;
+  @include text-default;
+}
+
+.price {
+  @include text-thin;
+  color: $--slate-gray;
+}
