@@ -1,0 +1,14 @@
+@import '../../../../common/mixins.scss';
+@import '../../../../common/colors.scss';
+
+.root {
+  @include text-header;
+  color: $--slate-gray;
+  justify-content: start !important;
+  align-items: start !important;
+  user-select: none;
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+  }
+}

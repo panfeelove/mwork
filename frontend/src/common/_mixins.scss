@@ -12,3 +12,10 @@
   font-size: 14px;
   font-weight: 300;
 }
+
+@mixin text-header {
+  @include text-default;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
