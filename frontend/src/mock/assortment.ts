@@ -2,243 +2,183 @@ import { ProductDataType } from '@/common/types';
 
 export const assortmentList: ProductDataType[] = [
   {
-    'id': 0,
-    'name': 'tempor',
-    'price': '$2,819.76',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Classic Blue Denim Jacket',
+    'price': 79.99,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 1
   },
   {
-    'id': 1,
-    'name': 'veniam',
-    'price': '$2,641.70',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Vintage Leather Boots',
+    'price': 120.50,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 2
   },
   {
-    'id': 2,
-    'name': 'incididunt',
-    'price': '$3,108.39',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Striped Cotton T-Shirt',
+    'price': 25.99,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 3
   },
   {
-    'id': 3,
-    'name': 'aliquip',
-    'price': '$3,807.62',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Floral Print Summer Dress',
+    'price': 45.99,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 4
   },
   {
-    'id': 4,
-    'name': 'cillum',
-    'price': '$2,673.48',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Slim Fit Black Jeans',
+    'price': 60.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 5
   },
   {
-    'id': 5,
-    'name': 'aliqua',
-    'price': '$1,730.14',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Wool Blend Coat',
+    'price': 150.75,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 6
   },
   {
-    'id': 6,
-    'name': 'labore',
-    'price': '$3,562.42',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Graphic Hoodie',
+    'price': 55.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 7
   },
   {
-    'id': 7,
-    'name': 'officia',
-    'price': '$2,509.46',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Chino Pants',
+    'price': 39.99,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 8
   },
   {
-    'id': 8,
-    'name': 'et',
-    'price': '$3,757.09',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Casual Sneakers',
+    'price': 70.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 9
   },
   {
-    'id': 9,
-    'name': 'reprehenderit',
-    'price': '$1,363.58',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Plaid Flannel Shirt',
+    'price': 34.99,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 10
   },
   {
-    'id': 10,
-    'name': 'magna',
-    'price': '$1,078.97',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Lightweight Windbreaker',
+    'price': 49.99,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 11
   },
   {
-    'id': 11,
-    'name': 'sint',
-    'price': '$2,935.77',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Basic White Tee',
+    'price': 19.99,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 12
   },
   {
-    'id': 12,
-    'name': 'occaecat',
-    'price': '$3,409.50',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Cargo Shorts',
+    'price': 29.99,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 13
   },
   {
-    'id': 13,
-    'name': 'nisi',
-    'price': '$2,559.64',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Knit Beanie',
+    'price': 15.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 14
   },
   {
-    'id': 14,
-    'name': 'do',
-    'price': '$2,148.82',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Denim Mini Skirt',
+    'price': 40.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 15
   },
   {
-    'id': 15,
-    'name': 'ullamco',
-    'price': '$2,835.79',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Linen Button-Up Shirt',
+    'price': 45.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 16
   },
   {
-    'id': 16,
-    'name': 'culpa',
-    'price': '$3,652.85',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Puffer Vest',
+    'price': 80.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 17
   },
   {
-    'id': 17,
-    'name': 'laboris',
-    'price': '$3,794.71',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Formal Black Dress',
+    'price': 99.99,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 18
   },
   {
-    'id': 18,
-    'name': 'nostrud',
-    'price': '$2,940.00',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Sporty Backpack',
+    'price': 45.99,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 19
   },
   {
-    'id': 19,
-    'name': 'anim',
-    'price': '$2,185.13',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Beach Cover-Up',
+    'price': 30.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 20
   },
   {
-    'id': 20,
-    'name': 'enim',
-    'price': '$3,998.00',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Fleece Joggers',
+    'price': 40.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 21
   },
   {
-    'id': 21,
-    'name': 'consequat',
-    'price': '$2,714.66',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Suede Ankle Boots',
+    'price': 85.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 22
   },
   {
-    'id': 22,
-    'name': 'non',
-    'price': '$2,062.08',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Ripped Skinny Jeans',
+    'price': 65.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 23
   },
   {
-    'id': 23,
-    'name': 'pariatur',
-    'price': '$3,822.57',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Cable Knit Sweater',
+    'price': 55.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 24
   },
   {
-    'id': 24,
-    'name': 'elit',
-    'price': '$2,895.35',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Silk Scarf',
+    'price': 25.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 25
   },
   {
-    'id': 25,
-    'name': 'pariatur',
-    'price': '$2,527.33',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Pleated Maxi Skirt',
+    'price': 50.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 26
   },
   {
-    'id': 26,
-    'name': 'commodo',
-    'price': '$2,155.53',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Athletic Tank Top',
+    'price': 27.99,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 27
   },
   {
-    'id': 27,
-    'name': 'pariatur',
-    'price': '$3,519.96',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Leather Crossbody Bag',
+    'price': 70.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 28
   },
   {
-    'id': 28,
-    'name': 'qui',
-    'price': '$2,747.97',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Warm Winter Scarf',
+    'price': 30.00,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 29
   },
   {
-    'id': 29,
-    'name': 'esse',
-    'price': '$2,429.42',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
+    'name': 'Lace Bralette',
+    'price': 19.99,
+    'imgUrl': 'https://place-hold.it/277x416/f5f5f5',
+    'id': 30
   },
-  {
-    'id': 30,
-    'name': 'non',
-    'price': '$1,115.28',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
-  },
-  {
-    'id': 31,
-    'name': 'eiusmod',
-    'price': '$3,949.81',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
-  },
-  {
-    'id': 32,
-    'name': 'amet',
-    'price': '$1,086.81',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
-  },
-  {
-    'id': 33,
-    'name': 'culpa',
-    'price': '$3,117.20',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
-  },
-  {
-    'id': 34,
-    'name': 'aute',
-    'price': '$3,703.77',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
-  },
-  {
-    'id': 35,
-    'name': 'magna',
-    'price': '$1,303.86',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
-  },
-  {
-    'id': 36,
-    'name': 'ipsum',
-    'price': '$2,474.54',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
-  },
-  {
-    'id': 37,
-    'name': 'veniam',
-    'price': '$2,157.86',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
-  },
-  {
-    'id': 38,
-    'name': 'exercitation',
-    'price': '$2,965.66',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
-  },
-  {
-    'id': 39,
-    'name': 'ut',
-    'price': '$1,070.90',
-    'imgUrl': 'https://place-hold.it/277x416/f5f5f5'
-  }
 ];

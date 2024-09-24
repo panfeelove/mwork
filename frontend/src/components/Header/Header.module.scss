@@ -8,10 +8,13 @@
   justify-content: space-between;
   background-color: $--whisper-white;
   padding: 0 2rem;
+  position: sticky;
+  top: 0;
 }
 
 .brandName {
   font-family: "Fascinate Inline", system-ui;
   font-weight: 400;
   font-style: normal;
+  user-select: none;
 }
