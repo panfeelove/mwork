@@ -1,7 +1,7 @@
-import { ProductDataType } from '@/common/types';
 import React from 'react';
 import styles from './AssortmentCard.module.scss';
 import { formatter } from '../../../common/utils/formatter';
+import { ProductDataType } from 'src/common/types';
 
 
 interface IAssortmentCardProps {

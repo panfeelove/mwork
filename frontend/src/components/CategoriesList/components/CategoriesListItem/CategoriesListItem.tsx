@@ -1,10 +1,10 @@
-import { CategoryDataType } from '../../../../common/types';
+import { Category } from '../../../../common/types';
 import React from 'react';
 import styles from './CategoriesListItem.module.scss';
 import { ButtonBase } from '../../../../common/components/ButtonBase';
 
 interface ICategoriesListItemProps {
-  item: CategoryDataType;
+  item: Category;
 }
 
 export const CategoriesListItem = ({ item }: ICategoriesListItemProps) => {

@@ -36,3 +36,7 @@ body {
 ::-webkit-scrollbar-corner {
   background-color: #3D3D3D;
 }
+
+#root {
+  height: 100%;
+}

@@ -4,6 +4,7 @@ export const typeDefs = gql`
 type Query {
   hello: String!,
   products: [Product!]!,
+  categories: [Category!]!
   product(id: ID!): Product,
 }
 
@@ -12,5 +13,14 @@ type Product {
   name: String!
   imageUrl: String
   price: Float!
+  categoryId: ID!
+  category: Category!
+}
+
+type Category {
+  id: ID!
+  categoryName: String
+  categoryDescription: String
+  products: [Product!]!
 }
 `;

@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './CategoriesList.module.scss';
-import { categoriesList } from '../../mock/categories';
 import { CategoriesListItem } from './components/CategoriesListItem';
+import { useStore } from 'src/store';
 
 export const CategoriesList = () => {
+  const categories = useStore((state) => state.categories);
   return (
     <div className={styles.root}>
       {
-        categoriesList.map(el => <CategoriesListItem item={el} key={el.id}/>)
+        categories.map(el => <CategoriesListItem item={el} key={el.id}/>)
       }
     </div>
   );
