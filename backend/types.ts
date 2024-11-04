@@ -2,14 +2,14 @@ import db from "./db";
 
 export type ProductDataType = {
   id: number;
-  imgUrl: string;
+  imageUrl: string;
   price: number;
   name: string;
-  categoryId: number;
+  categoryId: string;
 }
 
 export type CategoryDataType = {
-  id: number;
+  id: string;
   categoryDescription: string;
   categoryName: string;
 }

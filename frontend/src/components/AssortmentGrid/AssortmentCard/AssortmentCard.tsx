@@ -11,10 +11,12 @@ interface IAssortmentCardProps {
 export const AssortmentCard = ({ item }: IAssortmentCardProps) => {
   return (
     <div className={styles.root}>
-      <img src={item.imgUrl} alt={item.name} />
-      <div className={styles.info}>
-        <p className={styles.name}>{item.name}</p>
-        <span className={styles.price}>{formatter.format(item.price)}</span>
+      <img src={item.imageUrl} alt={item.name} />
+      <div>
+        <div className={styles.info}>
+          <p className={styles.name}>{item.name}</p>
+          <span className={styles.price}>{formatter.format(item.price)}</span>
+        </div>
       </div>
     </div>
   );

@@ -10,6 +10,9 @@ export const Query: IResolvers<any, Context> = {
     },
     categories: (parent, args, { db }) => {
       return db.categories // TODO
+    },
+    category: (parent, args: { id: string }, { db }) => {
+      return db.categories.find(el => el.id === args.id) || null;
     }
     // product: (parent: any, args: { id: string }) => products.find(el => el.id === args.id) || null,
   }

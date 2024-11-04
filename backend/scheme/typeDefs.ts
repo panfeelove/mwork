@@ -5,6 +5,7 @@ type Query {
   hello: String!,
   products: [Product!]!,
   categories: [Category!]!
+  category(id: ID!): Category,
   product(id: ID!): Product,
 }
 
