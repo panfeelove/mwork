@@ -1,4 +1,10 @@
 .root {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.assortment {
   display: grid;
   grid-template-columns: repeat(3, 277px);
   justify-content: center;

@@ -21,3 +21,13 @@ export type Category = CategoryDataType & {
 export interface Context {
   db: typeof db;
 };
+
+export enum SORTING_DIRECTIONS {
+  ASC = 'asc',
+  DESC = 'desc',
+}
+
+export type SortModel = {
+  field: string;
+  direction: SORTING_DIRECTIONS | null;
+}

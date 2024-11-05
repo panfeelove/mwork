@@ -20,3 +20,9 @@
   @include text-thin;
   color: $--slate-gray;
 }
+
+.image {
+  height: 416px;
+  width: 277px;
+  object-fit: cover;
+}

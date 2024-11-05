@@ -1,11 +1,11 @@
 import { gql } from '@apollo/client';
-import { Category } from 'src/common/types';
+import { Category, SortModel } from 'src/common/types';
 
 export const GET_CATEGORY = gql`
-  query Category($categoryId: ID!) {
+  query Category($categoryId: ID!, $sorting: SortModel) {
     category(id: $categoryId) {
       categoryName
-      products {
+      products(sorting: $sorting) {
         name
         id
         imageUrl
@@ -23,4 +23,5 @@ export type GetCategoryResponseType = {
 
 export type GetCategoryVariablesType = {
   categoryId: Category['id'];
+  sorting: SortModel | null;
 }

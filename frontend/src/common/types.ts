@@ -15,3 +15,13 @@ export type CategoryDataType = {
 export type Category = CategoryDataType & {
   products: ProductDataType[];
 }
+
+export enum SORTING_DIRECTIONS {
+  ASC = 'asc',
+  DESC = 'desc',
+}
+
+export type SortModel = {
+  field: string;
+  direction: SORTING_DIRECTIONS | null;
+}

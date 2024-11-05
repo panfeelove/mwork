@@ -1,0 +1,13 @@
+@import '../../common/colors.scss';
+
+.wideImage {
+  background-color: $--whisper-white;
+  width: 100%;
+  height: 550px;
+
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

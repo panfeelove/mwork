@@ -2,14 +2,14 @@ import { CategoryDataType } from "../types";
 
 export const categories: CategoryDataType[] = [
   {
-    'id': "1",
-    'categoryName': 'Men\'s Clothing',
-    'categoryDescription': 'A wide range of stylish and comfortable clothing for men, including shirts, pants, and outerwear.'
-  },
-  {
     'id': "2",
     'categoryName': 'Women\'s Clothing',
     'categoryDescription': 'Fashionable and trendy clothing for women, featuring dresses, tops, and skirts.'
+  },
+  {
+    'id': "1",
+    'categoryName': 'Men\'s Clothing',
+    'categoryDescription': 'A wide range of stylish and comfortable clothing for men, including shirts, pants, and outerwear.'
   },
   {
     'id': "3",

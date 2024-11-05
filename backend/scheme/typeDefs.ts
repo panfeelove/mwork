@@ -22,6 +22,16 @@ type Category {
   id: ID!
   categoryName: String
   categoryDescription: String
-  products: [Product!]!
+  products(sorting: SortModel): [Product!]!
+}
+
+input SortModel {
+  field: String!
+  direction: SortDirections
+}
+
+enum SortDirections {
+  asc
+  desc
 }
 `;

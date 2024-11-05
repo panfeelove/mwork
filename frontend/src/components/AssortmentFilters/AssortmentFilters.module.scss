@@ -1,0 +1,21 @@
+@import '../../common/colors.scss';
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: end;
+}
+
+.filter {
+  background: $--whisper-white;
+  color: $--slate-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  user-select: none;
+}
