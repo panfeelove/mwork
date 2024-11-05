@@ -1,0 +1,23 @@
+.root {
+  position: relative;
+
+  & svg {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.counter {
+  border: 1px solid #666666;
+  border-radius: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  right: 0;
+  height: 16px;
+  width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

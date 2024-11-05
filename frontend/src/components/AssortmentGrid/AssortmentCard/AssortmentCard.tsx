@@ -1,18 +1,52 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import styles from './AssortmentCard.module.scss';
 import { formatter } from '../../../common/utils/formatter';
 import { ProductDataType } from 'src/common/types';
-
+import { ButtonBase } from '@mui/material';
+import cn from 'classnames';
+import { useCartStore } from 'src/store/cart';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 interface IAssortmentCardProps {
   item: ProductDataType;
 }
 
 export const AssortmentCard = ({ item }: IAssortmentCardProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const cart = useCartStore((state) => state.cart);
+  const addToCart = useCartStore((state) => state.addToCart);
+  const handleAddToCart = () => {
+    if (isInCart) return;
+    addToCart(item);
+  };
+  const isInCart = useMemo(() => {
+    return !!cart.find(el => el.id === item.id);
+  }, [cart]);
+
   return (
-    <div className={styles.root}>
-      <img className={styles.image} src={item.imageUrl} alt={item.name} />
-      <div>
+    <div 
+      className={styles.root} 
+      onMouseOver={() => setIsHovered(true)} 
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className={styles.overlayContainer}>
+        <img className={styles.image} src={item.imageUrl} alt={item.name} />
+        <div className={cn(styles.overlay, { [styles.hovered]: isHovered })}>
+          <ButtonBase className={styles.addToCart} onClick={handleAddToCart}>
+            {
+              isInCart ? 'Added!' : 'Add to cart'
+            }
+          </ButtonBase>
+        </div>
+        {
+          isInCart && (
+            <span className={styles.indicator}>
+              <ShoppingCartIcon />
+            </span>
+          )
+        }
+      </div>
+      <div className={styles.content}>
         <div className={styles.info}>
           <p className={styles.name}>{item.name}</p>
           <span className={styles.price}>{formatter.format(item.price)}</span>

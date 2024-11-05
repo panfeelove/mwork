@@ -26,3 +26,50 @@
   width: 277px;
   object-fit: cover;
 }
+
+.content {
+  display: flex;
+  gap: 5px;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0 0 0 / 55%);
+  box-shadow: rgb(102 102 102) 0px -8px 27px -5px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  &.hovered {
+    opacity: 1;
+  }
+}
+
+.addToCart {
+  color: $--whisper-white !important;
+  @include text-default;
+  padding: 10px !important;
+  border-radius: 4px !important;
+  width: 100%;
+}
+
+.overlayContainer {
+  position: relative;
+  height: 416px;
+}
+
+.indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 8px;
+  & svg {
+    color: white;
+  }
+}

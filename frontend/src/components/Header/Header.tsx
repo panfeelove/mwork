@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Header.module.scss';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import { IconButton } from '../../common/components/IconButton';
+import CartButton from '../CartButton/CartButton';
 
 export const Header = () => {
   return (
@@ -10,14 +9,12 @@ export const Header = () => {
         {
           // [TODO] Here should be burger menu!!
         }
-        <h1 className={styles.brandName}>
+        <h1 className={styles.brandName} onClick={() => location.href = location.origin}>
           Soho
         </h1>
       </div>
       <div>
-        <IconButton>
-          <AccountCircleIcon />
-        </IconButton>
+        <CartButton />
       </div>
     </div>
   );
