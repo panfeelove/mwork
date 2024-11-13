@@ -1,17 +1,14 @@
 import React from 'react';
-import styles from './HotOffers.module.scss';
-import { useLoadedImage } from 'src/common/hooks/useLodedImage';
-import imageSrc from '../../static/currentCollection.jpg';
+import { withStaticUrl } from 'src/common/utils/helpers';
+import Carousel from '../Carousel/Carousel';
 
 const HotOffers = () => {
-  const [src] = useLoadedImage(imageSrc);
-  
   return (
-    <div className={styles.wideImage}>
-      {
-        src && <img src={src} alt="" />
-      }
-    </div>
+    <Carousel slides={[
+      { src: withStaticUrl('1.jpg') },
+      { src: withStaticUrl('2.jpg') },
+      { src: withStaticUrl('3.jpg') },
+    ]}/>
   );
 };
 

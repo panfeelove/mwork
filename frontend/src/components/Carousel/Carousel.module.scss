@@ -1,0 +1,41 @@
+@import '../../common/colors.scss';
+.root {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 550px;
+  background-color: $--whisper-white;
+}
+
+.imageWrapper {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  // transition: transform 0.3s ease;
+
+  &.swipe {
+    // transform: translateX(-50%);
+    animation: slideNext .5s ease;
+  }
+}
+
+@keyframes slideNext {
+  from {
+    transform: translateX(0);
+  } to {
+    transform: translateX(-50%);
+  }
+}
+
+.image {
+  width: 1191px;
+  object-fit: cover;
+
+  transition: opacity .6s ease-out;
+
+  &.swipe {
+    opacity: 0;
+  }
+}
