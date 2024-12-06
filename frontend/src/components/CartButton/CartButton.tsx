@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './CartButton.module.scss';
 import { IconButton } from '../../common/components/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { useCartStore } from 'src/store/cart';
+import { useCartStore } from '@/store/cart';
 
 const CartButton = () => {
   const selections = useCartStore((state) => state.cart);

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CategoriesList.module.scss';
 import { CategoriesListItem } from './components/CategoriesListItem';
-import { useStore } from 'src/store';
+import { useStore } from '@/store';
 
 export const CategoriesList = () => {
   const categories = useStore((state) => state.categories);

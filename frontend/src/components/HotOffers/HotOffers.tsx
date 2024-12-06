@@ -1,6 +1,6 @@
 import React from 'react';
-import { withStaticUrl } from 'src/common/utils/helpers';
 import Carousel from '../Carousel/Carousel';
+import { withStaticUrl } from '@/common/utils/helpers';
 
 const HotOffers = () => {
   return (

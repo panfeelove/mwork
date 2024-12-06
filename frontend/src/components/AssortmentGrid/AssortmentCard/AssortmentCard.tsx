@@ -1,11 +1,11 @@
 import React, { useMemo, useState } from 'react';
 import styles from './AssortmentCard.module.scss';
 import { formatter } from '../../../common/utils/formatter';
-import { ProductDataType } from 'src/common/types';
 import { ButtonBase } from '@mui/material';
 import cn from 'classnames';
-import { useCartStore } from 'src/store/cart';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { ProductDataType } from '@/common/types';
+import { useCartStore } from '@/store/cart';
 
 interface IAssortmentCardProps {
   item: ProductDataType;

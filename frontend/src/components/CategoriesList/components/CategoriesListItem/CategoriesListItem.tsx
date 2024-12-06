@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './CategoriesListItem.module.scss';
 import { ButtonBase } from '../../../../common/components/ButtonBase';
 import cn from 'classnames';
-import { useStore } from 'src/store';
+import { useStore } from '@/store';
 
 interface ICategoriesListItemProps {
   item: Category;

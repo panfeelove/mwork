@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './SohoAssortmentView.module.scss';
 import { CategoriesList } from '../CategoriesList';
 import { AssortmentGrid } from '../AssortmentGrid';
-import { useStore } from 'src/store';
 import HotOffers from '../HotOffers/HotOffers';
+import { useStore } from '@/store';
 
 
 

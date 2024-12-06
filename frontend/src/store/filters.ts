@@ -1,4 +1,4 @@
-import { SortModel } from 'src/common/types';
+import { SortModel } from '@/common/types';
 import { create } from 'zustand';
 
 interface IFiltersStore {

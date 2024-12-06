@@ -1,5 +1,5 @@
+import { Category, SortModel } from '@/common/types';
 import { gql } from '@apollo/client';
-import { Category, SortModel } from 'src/common/types';
 
 export const GET_CATEGORY = gql`
   query Category($categoryId: ID!, $sorting: SortModel) {

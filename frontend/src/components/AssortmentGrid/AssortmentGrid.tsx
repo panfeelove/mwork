@@ -2,10 +2,10 @@ import React, { useCallback, useEffect } from 'react';
 import styles from './AssortmentGrid.module.scss';
 import { AssortmentCard } from './AssortmentCard';
 import { useLazyQuery } from '@apollo/client';
-import { GET_CATEGORY, GetCategoryResponseType, GetCategoryVariablesType } from 'src/graphql/queries/getCategory';
-import { useStore } from 'src/store';
 import AssortmentFilters from '../AssortmentFilters/AssortmentFilters';
-import { useFiltersStore } from 'src/store/filters';
+import { GET_CATEGORY, GetCategoryResponseType, GetCategoryVariablesType } from '@/graphql/queries/getCategory';
+import { useStore } from '@/store';
+import { useFiltersStore } from '@/store/filters';
 
 export const AssortmentGrid = () => {
   const [getCategoryData] = useLazyQuery<GetCategoryResponseType, GetCategoryVariablesType>(GET_CATEGORY);

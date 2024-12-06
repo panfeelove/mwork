@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './AssortmentFilters.module.scss';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { SORTING_DIRECTIONS, SortModel } from 'src/common/types';
-import { useFiltersStore } from 'src/store/filters';
 import cn from 'classnames';
 import SortIcon from '@mui/icons-material/Sort';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { useFiltersStore } from '@/store/filters';
+import { SORTING_DIRECTIONS, SortModel } from '@/common/types';
 
 const sortingStateOrder = [SORTING_DIRECTIONS.ASC, SORTING_DIRECTIONS.DESC, null];
 

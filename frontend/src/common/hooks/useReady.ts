@@ -1,7 +1,8 @@
-import { useLazyQuery } from '@apollo/client';
 import React, { useCallback, useEffect, useState } from 'react';
-import { GET_CATEGORIES, GetCategoriesResponseType } from 'src/graphql/queries/getCategories';
-import { useStore } from 'src/store';
+import { GET_CATEGORIES, GetCategoriesResponseType } from '@/graphql/queries/getCategories';
+import { useStore } from '@/store';
+import { useLazyQuery } from '@apollo/client';
+
 
 export const useReady = () => {
   const [isReady, setIsReady] = useState(false);

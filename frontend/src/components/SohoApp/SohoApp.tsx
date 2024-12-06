@@ -3,7 +3,7 @@ import styles from './SohoApp.module.scss';
 import { Header } from '../Header';
 import { SohoAssortmentView } from '../SohoAssortmentView';
 import AppLoaderScreen from '../AppLoaderScreen/AppLoaderScreen';
-import { useReady } from 'src/common/hooks/useReady';
+import { useReady } from '@/common/hooks/useReady';
 
 export const SohoApp = () => {
   const [isAppReady] = useReady();

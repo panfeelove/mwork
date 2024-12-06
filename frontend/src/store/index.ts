@@ -1,4 +1,4 @@
-import { Category, ProductDataType } from 'src/common/types';
+import { Category, ProductDataType } from '@/common/types';
 import { create } from 'zustand';
 
 interface IStore {
