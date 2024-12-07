@@ -1,11 +1,20 @@
-import React from 'react';
-import { SohoApp } from './components/SohoApp';
+import React, { useEffect } from 'react';
 import { ApolloProvider } from '@apollo/client';
 import { client } from './graphql/client';
-import * as largeModule from './large_bundle';
+
+const SohoApp = React.lazy(() => import('./components/SohoApp'));
 
 function App() {
-  console.log(largeModule);
+  const importLargeModule = async () => {
+    return await import('./large_bundle');
+  };
+
+  useEffect(() => {
+    (async () => {
+      const largeModule = await importLargeModule();
+      console.log(largeModule);
+    })();
+  }, []);
   return (
     <ApolloProvider client={client}>
       <SohoApp />

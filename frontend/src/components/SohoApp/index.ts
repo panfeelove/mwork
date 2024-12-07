@@ -1,1 +1,3 @@
-export * from './SohoApp';
+import { SohoApp } from './SohoApp';
+
+export default SohoApp;

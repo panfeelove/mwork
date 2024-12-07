@@ -17,8 +17,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
     path: path.resolve(__dirname, 'build'),
-    // filename: '[name].[chunkhash].js',
-    filename: 'bundle.js',
+    filename: '[name].[chunkhash].js',
     // assetModuleFilename: 'assets/[name]__[hash][ext][query]',
     clean: true,
   },
@@ -99,16 +98,20 @@ module.exports = {
     historyApiFallback: true,
   },
   devtool: NODE_ENV === 'development' ? 'source-map' : false,
-  // optimization: {
-  //   splitChunks: {
-  //     cacheGroups: {
-  //       runtimeChunk: 'single',
-  //       vendor: {
-  //         test: /[\\/]node_modules[\\/]/,
-  //         name: 'vendors',
-  //         chunks: 'all'
-  //       }
-  //     }
-  //   },
-  // },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      maxSize: 1000000,
+      minSize: 500000,
+      chunks: 'all',
+      cacheGroups: {
+        runtimeChunk: 'single',
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    },
+  },
 };
