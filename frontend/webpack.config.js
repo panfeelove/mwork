@@ -99,6 +99,9 @@ module.exports = {
     historyApiFallback: true,
   },
   devtool: NODE_ENV === 'development' ? 'source-map' : false,
+  optimization: {
+    minimize: true
+  }
   // optimization: {
   //   splitChunks: {
   //     cacheGroups: {
