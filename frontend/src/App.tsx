@@ -4,14 +4,14 @@ import { client } from './graphql/client';
 
 const SohoApp = React.lazy(() => import('./components/SohoApp'));
 
-function App() {
-  const importLargeModule = async () => {
-    return await import('./large_bundle');
-  };
+const handleImportLargeModule = async () => {
+  return await import('./large_bundle');
+};
 
+function App() {
   useEffect(() => {
     (async () => {
-      const largeModule = await importLargeModule();
+      const largeModule = await handleImportLargeModule();
       console.log(largeModule);
     })();
   }, []);

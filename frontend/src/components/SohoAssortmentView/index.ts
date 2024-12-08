@@ -1,1 +1,3 @@
-export * from './SohoAssortmentView';
+import { SohoAssortmentView } from './SohoAssortmentView';
+
+export default SohoAssortmentView;
