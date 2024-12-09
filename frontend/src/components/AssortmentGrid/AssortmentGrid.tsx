@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import styles from './AssortmentGrid.module.scss';
 import { AssortmentCard } from './AssortmentCard';
 import { useLazyQuery } from '@apollo/client';
@@ -14,11 +14,11 @@ const LOAD_LIMIT = 9;
 export const AssortmentGrid = () => {
   const [getCategoryData] = useLazyQuery<GetCategoryResponseType, GetCategoryVariablesType>(GET_CATEGORY);
   const categoryId = useStore((state) => state.selectedCategory);
-  const setProducts = useStore(state => state.setProducts);
+  const setProducts = useStore(state => state.setProducts); 
   const products = useStore(state => state.products);
   const currentSorting = useFiltersStore((state) => state.sorting);
-  const [hasNext, setHasNext] = useState(true);
-  const [after, setAfter] = useState(0);
+  const [hasNext, setHasNext] = useState(categoryId && products[categoryId] ? products[categoryId].hasNext : true);
+  const [after, setAfter] = useState(categoryId && products[categoryId] ? products[categoryId].after : 0);
 
   const handleGetProducts = useCallback(async () => {
     if (!categoryId) return;
@@ -35,6 +35,9 @@ export const AssortmentGrid = () => {
       setProducts({
         categoryId,
         products: data.category.products.edges,
+        after: data.category.products.after,
+        totalCount: data.category.products.totalCount,
+        hasNext: data.category.products.hasNext,
       });
       setAfter(data.category.products.after);
       setHasNext(data.category.products.hasNext);
@@ -63,6 +66,21 @@ export const AssortmentGrid = () => {
       </>
     );
   };
+  
+  const handleResetList = () => {
+    if (!categoryId) return;
+    if (!products[categoryId]) {
+      setAfter(0);
+      setHasNext(true);
+      return;
+    }
+    setAfter(products[categoryId].after);
+    setHasNext(products[categoryId].hasNext);
+  };
+
+  useEffect(() => {
+    handleResetList();
+  }, [categoryId, currentSorting]);
 
 
   if (!categoryId) return null;
@@ -72,7 +90,7 @@ export const AssortmentGrid = () => {
       <AssortmentFilters />
       <div className={styles.assortment}>
         {
-          (products[categoryId] || []).map(el => <AssortmentCard item={el} key={el.id}/>)
+          (products[categoryId]?.edges || []).map(el => <AssortmentCard item={el} key={el.id + el.categoryId}/>)
         }
         {hasNext && renderLoadingScreen()}
       </div>

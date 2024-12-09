@@ -6,6 +6,7 @@ import SortIcon from '@mui/icons-material/Sort';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useFiltersStore } from '@/store/filters';
 import { SORTING_DIRECTIONS, SortModel } from '@/common/types';
+import { useStore } from '@/store';
 
 const sortingStateOrder = [SORTING_DIRECTIONS.ASC, SORTING_DIRECTIONS.DESC, null];
 
@@ -20,10 +21,12 @@ const getNextSorting = (currentSorting: SORTING_DIRECTIONS | null) => {
 const AssortmentFilters = () => {
   const currentSorting = useFiltersStore((state) => state.sorting);
   const setSorting = useFiltersStore((state) => state.setSorting);
+  const resetProducts = useStore((state) => state.resetProducts);
 
   const handleSort = (field: SortModel['field']) => {
     const nextSort = getNextSorting(currentSorting?.direction || null);
     setSorting(nextSort ? { field, direction: nextSort } : null);
+    resetProducts();
   };
 
   const getSortingIcon = (field: string) => {
