@@ -6,6 +6,13 @@ export type ProductDataType = {
   categoryId: string;
 }
 
+export type LazyProductsDataType = {
+  edges: ProductDataType[];
+  totalCount: number;
+  hasNext: boolean;
+  after: number;
+}
+
 export type CategoryDataType = {
   id: string;
   categoryDescription: string;
@@ -13,7 +20,7 @@ export type CategoryDataType = {
 }
 
 export type Category = CategoryDataType & {
-  products: ProductDataType[];
+  products: LazyProductsDataType;
 }
 
 export enum SORTING_DIRECTIONS {

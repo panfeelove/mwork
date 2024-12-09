@@ -22,7 +22,14 @@ type Category {
   id: ID!
   categoryName: String
   categoryDescription: String
-  products(sorting: SortModel): [Product!]!
+  products(sorting: SortModel, limit: Int, offset: Int = 0): LazyProducts # Поле для доступу до списку продуктів категорії
+}
+
+type LazyProducts {
+  edges: [Product!]!,
+  totalCount: Int,
+  hasNext: Boolean,
+  after: Int,
 }
 
 input SortModel {

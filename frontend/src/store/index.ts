@@ -16,7 +16,11 @@ export const useStore = create<IStore>((set) => ({
   products: {},
   setProducts: ({ categoryId, products }) => set((state) => {
     const updatedProducts = { ...state.products };
-    updatedProducts[categoryId] = products;
+    if (updatedProducts[categoryId]) {
+      updatedProducts[categoryId] = [...updatedProducts[categoryId], ...products];
+    } else {
+      updatedProducts[categoryId] = products;
+    }
     return {
       products: updatedProducts
     };

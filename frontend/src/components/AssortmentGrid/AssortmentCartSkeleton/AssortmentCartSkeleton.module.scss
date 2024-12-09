@@ -1,0 +1,15 @@
+@import '../../../common/colors.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.top, .down {
+  background-color: $--whisper-white;
+}
+
+.top {
+  height: 416px;
+}
