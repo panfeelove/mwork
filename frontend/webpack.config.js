@@ -94,7 +94,7 @@ module.exports = {
     new CompressionPlugin({
       filename: '[path][base].gz', // Ім'я згенерованого файлу
       algorithm: 'gzip', // Алгоритм компресії
-      test: /\.(js|css|html|svg)$/, // Які файли компресувати
+      test: /\.(js|css|html|svg|jpg|jpeg|png|webp)$/, // Які файли компресувати
       threshold: 10240, // Мінімальний розмір файлу для компресії (10 КБ)
       minRatio: 0.8, // Компресувати, якщо співвідношення стиснення < 0.8
     }),

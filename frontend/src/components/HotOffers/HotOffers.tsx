@@ -6,13 +6,8 @@ import styles from './HotOffers.module.scss';
 const HotOffers = () => {
   return (
     <div className={styles.wideImage}>
-      <img src={withStaticUrl('1.jpg')} alt="" />
+      <img src={withStaticUrl('3.webp')} loading='lazy' />
     </div>
-    // <Carousel slides={[
-    //   { src: withStaticUrl('1.jpg') },
-    //   { src: withStaticUrl('2.jpg') },
-    //   { src: withStaticUrl('3.jpg') },
-    // ]}/>
   );
 };
 

@@ -39,7 +39,7 @@ export const AssortmentCard = ({ item }: IAssortmentCardProps) => {
     >
       <div className={styles.overlayContainer}>
         {
-          isLoading ? <AssortmentCartSkeleton /> : <img className={styles.image} src={item.imageUrl} alt={item.name} />
+          isLoading ? <AssortmentCartSkeleton /> : <img className={styles.image} src={item.imageUrl} alt={item.name} loading='lazy' />
         }
         <div className={cn(styles.overlay, { [styles.hovered]: isHovered })}>
           <ButtonBase className={styles.addToCart} onClick={handleAddToCart}>
